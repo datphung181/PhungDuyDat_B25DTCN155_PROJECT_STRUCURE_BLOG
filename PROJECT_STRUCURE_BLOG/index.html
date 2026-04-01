@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="./style_css/index.css">
+    <link rel="stylesheet" href="./style_css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Logo -->
+    <div class="logo">
+        <span><img src="./assets/images/Vector.png" alt="logo"></span>
+        <span><strong>RIKKEI_EDU_BLOG</strong></span>
+    </div>
+
+    <!-- Search -->
+    <div class="search-box">
+        <input type="text" placeholder="Search for articles">
+        <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+    </div>
+
+
+<!-- User -->
+<div class="user">
+    <!-- Khi chưa đăng nhập -->
+    <div class="auth-buttons" id="auth-buttons">
+        <button class="btn-signup">Sign Up</button>
+        <button class="btn-signin" onclick="handleLogin()">Sign In</button>
+    </div>
+
+    <!-- Khi đã đăng nhập (ẩn mặc định) -->
+    <div class="user-logged" id="user-logged" style="display: none;">
+        <input type="checkbox" id="toggle-menu">
+        <label for="toggle-menu">
+            <img src="./assets/images/Avatar.png" alt="avatar">
+        </label>
+        <div class="dropdown">
+            <div class="user-info">
+                <img src="./assets/images/Avatar.png">
+                <div>
+                    <strong>Rikkei</strong>
+                    <p>rikkei@gmail.com</p>
+                </div>
+            </div>
+            <ul>
+                <li>View profile</li>
+                <li>Update profile picture</li>
+                <li>Change password</li>
+                <li class="logout" onclick="handleLogout()">Log out</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</header>
+
+
+
+
+
+
+
+<main class="blog-section">
+    <h2 class="section-title">Recent blog posts</h2>
+ 
+    <div class="blog-grid">
+ 
+      <!-- Featured post (large left) -->
+      <article class="post post--featured" id="post-1">
+        <div class="post__image post__image--featured"></div>
+        <div class="post__body">
+          <span class="post__date">Date: 2025-02-25</span>
+          <h3 class="post__title">A Productive Day at Work</h3>
+          <p class="post__excerpt">Today was a really productive day at work. I managed to finish a report ahead of schedule and received positive feedback from my manager.</p>
+          <span class="post__tag-daily">Daily Journal</span>
+        </div>
+      </article>
+ 
+      <!-- Right column: two stacked posts -->
+      <div class="post-stack">
+ 
+        <article class="post post--compact" id="post-2">
+          <div class="post__image post__image--compact_01"></div>
+          <div class="post__body">
+            <span class="post__date">Date: 2025-02-24</span>
+            <h3 class="post__title">My First Job Interview Experience</h3>
+            <p class="post__excerpt">I had my first job interview today! I was nervous at first, but as the conversation went on, I felt more confident.</p>
+            <span class="post__tag-work-career">Work &amp; Career</span>
+          </div>
+        </article>
+ 
+        <article class="post post--compact" id="post-3">
+          <div class="post__image post__image--compact_02"></div>
+          <div class="post__body">
+            <span class="post__date">Date: 2025-02-23</span>
+            <h3 class="post__title">Overthinking Everything</h3>
+            <p class="post__excerpt">Lately, I have been overthinking everything, from small decisions to bigger life choices. I know I should trust myself...</p>
+            <span class="post__tag-work-personal">Personal Thoughts</span>
+          </div>
+        </article>
+ 
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+<div class="container">
+ 
+  <!-- Top navigation -->
+  <nav class="top-nav">
+    <a href="#" class="active">All blog posts</a>
+    <a href="#">All my posts</a>
+  </nav>
+ 
+  <!-- Category filter -->
+  <div class="category-filter">
+    <button class="active">Daily Journal</button>
+    <button>Work &amp; Career</button>
+    <button>Personal Thoughts</button>
+    <button>Emotions &amp; Feelings</button>
+  </div>
+ 
+  <!-- Post grid -->
+  <div class="post-grid">
+ 
+    <!-- Post 1 -->
+    <div class="post-card">
+      <img src="./assets/images/work.png" alt="A Productive Day at Work" />
+      <div class="content">
+        <p class="date">Date: 2025-02-25</p>
+        <div class="title-row">
+          <h2>A Productive Day at Work</h2>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          </svg>
+        </div>
+        <p>Today was a really productive day at work. I managed to finish a report ahead of schedule and received positive feedback from my manager.</p>
+        <span class="badge daily-journal">Daily Journal</span>
+      </div>
+    </div>
+ 
+    <!-- Post 2 -->
+    <div class="post-card">
+      <img src="./assets/images/job.png" alt="My First Job Interview Experience" />
+      <div class="content">
+        <p class="date">Date: 2025-02-24</p>
+        <div class="title-row">
+          <h2>My First Job Interview Experience</h2>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          </svg>
+        </div>
+        <p>I had my first job interview today! I was nervous at first, but as the conversation went on, I felt more confident.</p>
+        <span class="badge work-career">Work &amp; Career</span>
+      </div>
+    </div>
+ 
+    <!-- Post 3 -->
+    <div class="post-card">
+      <img src="./assets/images/computer.png" alt="Overthinking Everything" />
+      <div class="content">
+        <p class="date">Date: 2025-02-23</p>
+        <div class="title-row">
+          <h2>Overthinking Everything</h2>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          </svg>
+        </div>
+        <p>Lately, I have been overthinking everything, from small decisions to bigger life choices. I know I should trust myself.</p>
+        <span class="badge personal-thoughts">Personal Thoughts</span>
+      </div>
+    </div>
+ 
+    <!-- Post 4 -->
+    <div class="post-card">
+      <img src="./assets/images/prepare.png" alt="How collaboration makes us better designers" />
+      <div class="content">
+        <p class="date">Date: 2025-02-16</p>
+        <div class="title-row">
+          <h2>How collaboration makes us better designers</h2>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          </svg>
+        </div>
+        <p>Collaboration can make our teams stronger, and our individual designs better.</p>
+        <span class="badge work-career">Work &amp; Career</span>
+      </div>
+    </div>
+ 
+    <!-- Post 5 -->
+    <div class="post-card">
+      <img src="./assets/images/work_02.png" alt="Our top 10 Javascript frameworks to use" />
+      <div class="content">
+        <p class="date">Date: 2025-02-15</p>
+        <div class="title-row">
+          <h2>Our top 10 Javascript frameworks to use</h2>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          </svg>
+        </div>
+        <p>JavaScript frameworks make development easy with extensive features and functionalities.</p>
+        <span class="badge work-career">Work &amp; Career</span>
+      </div>
+    </div>
+ 
+    <!-- Post 6 -->
+    <div class="post-card">
+      <img src="./assets/images/podcast.png" alt="Podcast: Creating a better CX Community" />
+      <div class="content">
+        <p class="date">Date: 2025-02-05</p>
+        <div class="title-row">
+          <h2>Podcast: Creating a better CX Community</h2>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          </svg>
+        </div>
+        <p>Starting a community doesn't need to be complicated, but how do you get started?</p>
+        <span class="badge emotions-feelings">Emotions &amp; Feelings</span>
+      </div>
+    </div>
+ 
+  </div><!-- /post-grid -->
+ 
+  <!-- Pagination -->
+  <div class="pagination">
+    <button class="prev-next">
+      ← Previous
+    </button>
+ 
+    <div class="page-numbers">
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <span class="dots">...</span>
+      <button>8</button>
+      <button>9</button>
+      <button>10</button>
+    </div>
+ 
+    <button class="prev-next">
+      Next →
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        
+        <!-- Logo -->
+        <div class="footer-col logo">
+            <h2>MY BLOG</h2>
+        </div>
+
+        <!-- About -->
+        <div class="footer-col">
+            <h4>About</h4>
+            <h5>Rareblocks</h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nullam dictum aliquet accumsan porta lectus ridiculus in mattis. 
+                Netus sodales in volutpat ullamcorper amet adipiscing fermentum.
+            </p>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li>About</li>
+                <li>Features</li>
+                <li>Works</li>
+                <li>Career</li>
+            </ul>
+        </div>
+
+        <!-- Help -->
+        <div class="footer-col">
+            <h4>Help</h4>
+            <ul>
+                <li>Customer Support</li>
+                <li>Delivery Details</li>
+                <li>Terms & Conditions</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li>Free eBooks</li>
+                <li>Development Tutorial</li>
+                <li>How to - Blog</li>
+                <li>Youtube Playlist</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Social -->
+    <div class="footer-bottom">
+    <i class="fab fa-twitter"></i>     
+    <i class="fab fa-facebook-f"></i>  
+    <i class="fab fa-instagram"></i>   
+    <i class="fab fa-github"></i>      
+</div>
+</footer>
+
+</body>
+</html>

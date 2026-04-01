@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Article</title>
+  <link rel="stylesheet" href="../style_css/add_new_article.css">
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Close -->
+  <button class="btn-close" onclick="window.history.back()">&#x2715;</button>
+
+  <!-- Title -->
+  <h1 class="page-title">📝 Add New Article</h1>
+
+  <!-- Title field -->
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" id="title" placeholder="">
+  </div>
+
+  <!-- Category -->
+  <div class="form-group">
+    <label for="category">Article Categories:</label>
+    <input type="text" id="category" list="category-options" placeholder="">
+    <datalist id="category-options">
+      <option value="Daily Journal">
+      <option value="Work & Career">
+      <option value="Personal Thoughts">
+      <option value="Emotions & Feelings">
+    </datalist>
+  </div>
+
+  <!-- Mood -->
+  <div class="form-group">
+    <label for="mood">Mood:</label>
+    <input type="text" id="mood" list="mood-options" placeholder="😊 Happy">
+    <datalist id="mood-options">
+      <option value="😊 Happy">
+      <option value="😢 Sad">
+      <option value="🤩 Excited">
+      <option value="😰 Anxious">
+      <option value="😌 Calm">
+    </datalist>
+  </div>
+
+  <!-- Content -->
+  <div class="form-group">
+    <label for="content">Content:</label>
+    <textarea id="content"></textarea>
+  </div>
+
+  <!-- Status -->
+  <div class="status-row">
+    <span class="status-label">Status</span>
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="status" value="public" checked> public
+      </label>
+      <label>
+        <input type="radio" name="status" value="private"> private
+      </label>
+    </div>
+  </div>
+
+  <!-- Upload -->
+  <div class="upload-box">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+         stroke="currentColor" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 16v-8m0 0l-3 3m3-3l3 3M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1" />
+    </svg>
+    <p>Browse and chose the files you want to upload from your computer</p>
+  </div>
+
+  <!-- Submit -->
+  <button class="btn-add">Add</button>
+
+</div>
+
+</body>
+</html>

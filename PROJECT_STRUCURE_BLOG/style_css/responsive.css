@@ -1,0 +1,71 @@
+/*LOGIN RESPONSIVE*/
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        text-align: center;
+        gap:0;
+    }
+
+    .illustration-section {
+        justify-content: center;
+    }
+
+    .social-signin {
+        justify-content: center;
+    }
+
+    .login-btn {
+        width: 100%;
+    }
+    .image-wrapper img{
+        width: 70%;
+    }
+    .footer {
+        padding: 10px;
+    }
+}
+
+
+
+
+/*REGISTER RESPONSIVE*/
+@media (max-width: 850px) {
+    .wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .content-left h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .form-card {
+        margin-top: 30px;
+    }
+} 
+
+
+
+/* ===== RESPONSIVE MAIN ===== */
+@media (max-width: 740px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .post__image--compact {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+@media (max-width: 560px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,416 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #eee;
+}
+
+/* HEADER */
+.header {
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;   
+    top: 0;             
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+}
+
+
+/* SEARCH */
+.search-box {
+    flex: 1;
+    max-width: 900px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 35px 8px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: #fafafa;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* USER */
+.user {
+    position: relative;
+}
+
+/* Ẩn checkbox */
+#toggle-menu {
+    display: none;
+}
+
+/* Avatar */
+.user label img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 220px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+/* Khi click -> hiện */
+#toggle-menu:checked ~ .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* USER INFO */
+.user-info {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.user-info p {
+    font-size: 12px;
+    color: gray;
+}
+
+/* MENU */
+.dropdown ul {
+    list-style: none;
+}
+
+.dropdown li {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown li:hover {
+    background: #f2f2f2;
+}
+
+.logout {
+    color: red;
+}
+
+
+
+
+.title-add-new {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color:#0D6EFD;
+    text-shadow: 0px 3px 4px rgb(174, 170, 170);
+}
+
+
+
+
+
+
+
+
+/* --- Reset --- */
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+  background-color: #ffffff;
+}
+
+/* --- Top navigation --- */
+.top-nav {
+  display: flex;
+  gap: 40px;
+
+}
+
+.top-nav a {
+  font-size: 24px;
+  font-weight: 500;
+  color: #6155F5;
+  text-decoration: none;
+  padding-bottom: 30px;
+}
+
+.top-nav a.active {
+  color: #6155F5;
+  font-weight: 600;
+}
+
+/* --- Category filter --- */
+.category-filter {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.category-filter button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
+
+
+
+/* --- Post grid --- */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* --- Post card --- */
+.post-card {
+  cursor: pointer;
+}
+
+.post-card img {
+  height: 50%;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.post-card .content {
+  padding: 12px 0 14px;
+}
+
+.post-card .date {
+  font-size: 11px;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.post-card .title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.post-card h2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.post-card .arrow {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  color: #555;
+}
+
+.post-card p {
+  font-size: 12.5px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+
+  /* Giới hạn 3 dòng */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Category badge --- */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge.daily-journal      { background: #F9F5FF; color: #7b5ea7; }
+.badge.work-career        { background: #F0F9FF; color: #1565c0; }
+.badge.personal-thoughts  { background: #ECFDF3; color: #187835; }
+.badge.emotions-feelings  { background: #F9F5FF; color: #7b5ea7; }
+
+/* --- Pagination --- */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+}
+
+.pagination .prev-next {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination .page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination .page-numbers button {
+  min-width: 28px;
+  height: 28px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #888;
+  border-radius: 4px;
+}
+
+.pagination .page-numbers button.active {
+  background: #F9F5FF; 
+  color: #7b5ea7;
+  font-weight: 600;
+}
+
+.pagination .dots {
+  font-size: 13px;
+  color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+.footer {
+    background: #ffffff;
+    padding: 40px 60px 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* layout */
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+/* logo */
+.footer-col.logo h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* title */
+.footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-col h5 {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+/* text */
+.footer-col p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* list */
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #444;
+    cursor: pointer;
+}
+
+.footer-col li:hover {
+    color: #000;
+}
+
+/* bottom icons */
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom i {
+    margin: 0 12px;
+    font-size: 18px;
+    color: #444;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-bottom i:hover {
+    color: #000;
+}
