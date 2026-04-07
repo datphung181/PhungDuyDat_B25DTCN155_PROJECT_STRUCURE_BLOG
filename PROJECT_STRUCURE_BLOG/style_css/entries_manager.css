@@ -1,0 +1,223 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #FAFAFB;
+}
+
+/* ================= TOPBAR ================= */
+.topbar {
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-right i {
+    color: #000000;
+    cursor: pointer;
+}
+
+.user { position: relative; }
+#toggle-menu { display: none; }
+.user label img { width: 35px; height: 35px; border-radius: 50%; cursor: pointer; }
+.dropdown {
+  position: absolute; right: 0; top: 50px; width: 220px;
+  background: white; border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  opacity: 0; visibility: hidden; transform: translateY(-10px);
+  transition: 0.3s;
+}
+#toggle-menu:checked ~ .dropdown {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.user-info { display: flex; gap: 10px; padding: 10px; border-bottom: 1px solid #eee; }
+.user-info img { width: 35px; height: 35px; border-radius: 50%; }
+.user-info p { font-size: 12px; color: gray; }
+.dropdown ul { list-style: none; }
+.dropdown li { padding: 10px; font-size: 14px; cursor: pointer; }
+.dropdown li:hover { background: #f2f2f2; }
+.dropdown li.logout { color: red; }
+
+/* ================= SEARCH ================= */
+.search-box {
+    padding: 15px 20px;
+    margin-left: 240px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #888;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 15px 15px 40px;
+    border: none;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 220px;
+    padding: 20px;
+}
+
+.sidebar-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #D7EDFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    color: #0E73F6;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+}
+
+.sidebar-btn img {
+    width: 20px;
+}
+
+.sidebar-btn a {
+    text-decoration: none;
+    color: #0E73F6;
+}
+
+.sidebar-btn:hover {
+    background: #bfe0ff;
+}
+
+/* ================= MAIN ================= */
+.main {
+    margin-left: 240px;
+    margin-top: 80px;
+    padding: 20px;
+    background: white;
+}
+
+.page-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* ================= FORM ================= */
+.category-input {
+    width: 70%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+}
+
+.add-btn {
+    width: 70%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+/* ================= TABLE ================= */
+.category-table {
+    width: 70%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.category-table th,
+.category-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.category-table th {
+    background: #F4F4F4;
+}
+
+/* column size */
+.category-table th:nth-child(1),
+.category-table td:nth-child(1) {
+    width: 10%;
+    text-align: center;
+}
+
+.category-table th:nth-child(2),
+.category-table td:nth-child(2) {
+    width: 30%;
+}
+
+.category-table th:nth-child(3),
+.category-table td:nth-child(3) {
+    width: auto;
+}
+
+/* ================= BUTTON ================= */
+.edit-btn,
+.delete-btn {
+    padding: 7px 14px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.edit-btn {
+    background: #22c55e;
+}
+
+.delete-btn {
+    background: #ef4444;
+}
+
+.edit-btn:hover {
+    background: #16a34a;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Categories</title>
+    <link rel="stylesheet" href="../style_css/entries_manager.css">
+    <link rel="stylesheet" href="../style_css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div id="app" class="app">
+
+    <!-- TOPBAR -->
+    <div id="topbar" class="topbar">
+        <div class="top-right">
+            <i class="fa-regular fa-envelope"></i>
+            <i class="fa-regular fa-bell"></i>
+            <div class="user">
+                <div class="user-logged" id="user-logged">
+                    <input type="checkbox" id="toggle-menu">
+                    <label for="toggle-menu">
+                    <img src="../assets/images/Avatar.png" alt="avatar">
+                    </label>
+                    <div class="dropdown">
+                        <div class="user-info">
+                            <img src="../assets/images/Avatar.png">
+                            <div>
+                            <strong></strong>
+                            <p></p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>View profile</li>
+                            <li>Update profile picture</li>
+                            <li>Change password</li>
+                            <li id="btnLogout1" class="logout">Log out</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="searchBox" class="search-box">
+        <div class="search-wrapper">
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input id="searchInput" class="search-input" type="text" placeholder="Search Article Categories">
+        </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
+        <button id="btnUsers" class="sidebar-btn"><img src="../assets/images/Users_Group.png" alt=""><a href="../pages/user_manager.html">Manage Users</a></button>
+        <button id="btnEntries" class="sidebar-btn"><img src="../assets/images/Book.png" alt=""><a href="../pages/entries_manager.html">Manage Entries</a></button>
+        <button id="btnArticles" class="sidebar-btn"><img src="../assets/images/Book_Open.png" alt=""><a href="../pages/article_manager.html">Manage Article</a></button>
+        <button id="btnLogout2" class="sidebar-btn logout"><img src="../assets/images/Log_Out.png" alt="">Log out</button>
+    </div>
+
+    <!-- MAIN -->
+    <div id="main" class="main">
+
+        <h2 id="title" class="page-title">📂 Manage Categories</h2>
+
+        <label for="categoryInput" class="form-label">Category Name:</label>
+        <input id="categoryInput" class="category-input" type="text" placeholder="Enter category name">
+
+        <button id="addBtn" class="add-btn">Add Category</button>
+
+        <h3 class="section-title">📋 Category List</h3>
+
+        <table id="categoryTable" class="category-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Category Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<script type="module" src="../javascript/entries_manager.js"></script>
+</body>
+</html>

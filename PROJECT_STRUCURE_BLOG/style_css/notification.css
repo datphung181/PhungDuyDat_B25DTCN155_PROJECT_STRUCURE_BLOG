@@ -1,0 +1,11 @@
+/* Hiển thị thông báo lỗi */
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+.input-error {
+    border: 1px solid red;
+}

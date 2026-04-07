@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - RIKKEI EDUCATION</title>
+    <link rel="stylesheet" href="../style_css/notification.css">
+    <link rel="stylesheet" href="../style_css/register.css">
+    <link rel="stylesheet" href="../style_css/responsive.css">
+</head>
+<body>
+
+    <!-- TOAST -->
+    <div id="toast"></div>
+
+    <div class="wrapper">
+        <div class="content-left">
+            <h1>Welcome to the website</h1>
+            <p>RIKKEI EDUCATION</p>
+        </div>
+
+        <div class="form-card">
+            <form novalidate id="registerForm">
+                
+                <div class="row">
+                    <div class="input-box">
+                        <input type="text" id="firstName" required>
+                        <label>First name</label>
+                        <!-- lỗi -->
+                        <span class="error" id="firstNameError"></span>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="lastName" required>
+                        <label>Last name</label>
+                        <!-- lỗi -->
+                        <span class="error" id="lastNameError"></span>
+                    </div>
+                </div>
+
+                <div class="input-box full">
+                    <input type="email" id="email" required>
+                    <label>Email address</label>
+                    <!-- lỗi -->
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="input-box full">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                    <!-- lỗi -->
+                    <span class="error" id="passwordError"></span>
+                </div>
+
+                <div class="input-box full">
+                    <input type="password" id="confirmPassword" required>
+                    <label>Confirm Password</label>
+                    <!-- lỗi -->
+                    <span class="error" id="confirmPasswordError"></span>
+                </div>
+
+                <button type="submit" id="signup-submit">Sign up</button>
+
+                <p class="footer-text">
+                    Already have an account? 
+                    <a href="../pages/login.html">Login</a>
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script src="../javascript/register.js"></script>
+</body>
+</html>

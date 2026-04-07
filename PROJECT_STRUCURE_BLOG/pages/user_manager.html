@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Manage Users</title>
+    <link rel="stylesheet" href="../style_css/user_manager.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body id="body">
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="top-right">
+            <i class="fa-regular fa-envelope"></i>
+            <i class="fa-regular fa-bell"></i>
+            <div class="user">
+                <div class="user-logged" id="user-logged">
+                    <input type="checkbox" id="toggle-menu">
+                    <label for="toggle-menu">
+                    <img src="../assets/images/Avatar.png" alt="avatar">
+                    </label>
+                    <div class="dropdown">
+                        <div class="user-info">
+                            <img src="../assets/images/Avatar.png">
+                            <div>
+                            <strong></strong>
+                            <p></p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>View profile</li>
+                            <li>Update profile picture</li>
+                            <li>Change password</li>
+                            <li id="btnLogout1" class="logout">Log out</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTAINER ================= -->
+    <div class="container" id="container">
+
+        <!-- ===== SIDEBAR ===== -->
+        <div id="sidebar">
+            <button id="btnUsers"><img src="../assets/images/Users_Group.png" alt=""><a href="../pages/user_manager.html">Manage Users</a></button>
+            <button id="btnEntries"><img src="../assets/images/Book.png" alt=""><a href="../pages/entries_manager.html">Manage Entries</a></button>
+            <button id="btnArticles"><img src="../assets/images/Book_Open.png" alt=""><a href="../pages/article_manager.html">Manage Article</a></button>
+            <button id="btnLogout2" class="logout"><img src="../assets/images/Log_Out.png" alt="">Log out</button>
+        </div>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="content" id="content">
+
+            <!-- TOP BAR -->
+            <div class="top-bar" id="topBar">
+
+                <div class="team-info">
+                    <span class="team-title">Team members</span>
+                    <span class="team-count" id="userCount">0 users</span>
+                </div>
+
+                <div id="searchBox">
+                    <div class="search-wrapper">
+                        <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input id="searchInput" type="text" placeholder="Search Article Categories">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ===== TABLE ===== -->
+            <table>
+            <thead>
+                <tr>
+                <th style="width:45%">Name <i class="fa-solid fa-arrow-down-a-z"></i></th>
+                <th style="width:10%">Status <i class="fa-solid fa-arrow-down"></i></th>
+                <th style="width:20%">Email address</th>
+                <th style="width:auto">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <tr>
+                    <td>
+                        <div class="user-cell">
+                        <img class="avatar" src="https://i.pravatar.cc/80?img=47" alt="Olivia Rhye">
+                        <div>
+                            <div class="user-name">Olivia Rhye</div>
+                            <div class="user-handle">@olivia</div>
+                        </div>
+                        </div>
+                    </td>
+                    <td><span class="status-badge">hoạt động</span></td>
+                    <td class="email">olivia@untitledui.com</td>
+                    <td>
+                        <div class="actions">
+                        <button class="btn-action btn-block">block</button>
+                        <button class="btn-action btn-unblock">unblock</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+
+            <!-- ===== PAGINATION ===== -->
+            <div class="pagination">
+                <button class="prev-next">
+                ← Previous
+                </button>
+            
+                <div class="page-numbers">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <span class="dots">...</span>
+                <button>8</button>
+                <button>9</button>
+                <button>10</button>
+                </div>
+            
+                <button class="prev-next">
+                Next →
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+
+<script type="module" src="../javascript/user_manager.js"></script>
+
+</body>
+</html>
